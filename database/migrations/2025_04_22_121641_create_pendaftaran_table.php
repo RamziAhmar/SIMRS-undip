@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('pendaftaran', function (Blueprint $table) {
             $table->id();
+            $table->integer('id_user');
+            $table->integer('id_pasien');
+            $table->datetime('waktu_pendaftaran');
+            $table->text('keluhan');
             $table->timestamps();
         });
     }

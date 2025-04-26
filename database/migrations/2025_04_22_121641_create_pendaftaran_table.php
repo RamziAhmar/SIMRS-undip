@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('id_pasien');
             $table->datetime('waktu_pendaftaran');
             $table->text('keluhan');
-            $table->text('status');
+            $table->enum('status', ['Mengantri', 'Berlangsung', 'Selesai']);
             $table->timestamps();
         });
     }

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function index() {
-        return view('layouts.main', [
+        return view('main', [
             'title' => 'Users',
             'page' => 'users',
         ]);

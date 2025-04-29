@@ -26,8 +26,8 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/user/view/{id}', 'view');
     Route::get('/user/insert', 'add');
     Route::post('/user/insert', 'insert');
-    Route::get('/user/update', 'edit');
-    Route::post('/user/update', 'update');
+    Route::get('/user/update/{id}', 'edit');
+    Route::post('/user/update/{id}', 'update');
     Route::get('/user/delete/{id}', 'delete');
 });
 

@@ -9,13 +9,13 @@
             </div>
             <div class="navbar-content">
                 <ul class="pc-navbar">
-                    <li class="pc-item">
+                    <li class="pc-item {{ $page == 'dashboard' ? 'active' : null }}">
                         <a href="/" class="pc-link">
                             <span class="pc-micon"><i class="ti ti-dashboard"></i></span>
                             <span class="pc-mtext">Dashboard</span>
                         </a>
                     </li>
-                    <li class="pc-item">
+                    <li class="pc-item {{ $page == 'rekam_medis' ? 'active' : null }}">
                         <a href="/rekam_medis" class="pc-link">
                             <span class="pc-micon"><i class="ti ti-chart-line"></i></span>
                             <span class="pc-mtext">Rekam Medis</span>
@@ -26,25 +26,25 @@
                         <label>Master Data</label>
                         <i class="ti ti-dashboard"></i>
                     </li>
-                    <li class="pc-item">
+                    <li class="pc-item {{ $page == 'pasien' ? 'active' : null }}">
                         <a href="/pasien" class="pc-link">
                             <span class="pc-micon"><i class="ti ti-user-plus"></i></span>
                             <span class="pc-mtext">Pasien</span>
                         </a>
                     </li>
-                    <li class="pc-item">
+                    <li class="pc-item {{ $page == 'pendaftaran' ? 'active' : null }}">
                         <a href="/pendaftaran" class="pc-link">
                             <span class="pc-micon"><i class="ti ti-notebook"></i></span>
                             <span class="pc-mtext">Pendaftaran</span>
                         </a>
                     </li>
-                    <li class="pc-item">
+                    <li class="pc-item {{ $page == 'penanganan' ? 'active' : null }}">
                         <a href="/penanganan" class="pc-link">
                             <span class="pc-micon"><i class="ti ti-activity"></i></span>
                             <span class="pc-mtext">Penanganan</span>
                         </a>
                     </li>
-                    <li class="pc-item">
+                    <li class="pc-item {{ $page == 'profile' ? 'active' : null }}">
                         <a href="/profile" class="pc-link">
                             <span class="pc-micon"><i class="ti ti-user-exclamation"></i></span>
                             <span class="pc-mtext">Profile</span>
@@ -55,7 +55,7 @@
                         <label>Access</label>
                         <i class="ti ti-news"></i>
                     </li>
-                    <li class="pc-item">
+                    <li class="pc-item {{ $page == 'user' || 'user_add' || 'user_view' ? 'active' : null }}">
                         <a href="/user" class="pc-link">
                             <span class="pc-micon"><i class="ti ti-user"></i></span>
                             <span class="pc-mtext">User</span>

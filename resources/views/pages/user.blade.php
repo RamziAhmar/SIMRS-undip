@@ -1,7 +1,7 @@
 <div class="col-md-12">
     <div class="card mb-4">
         <div class="card-header">
-            <h3 class="card-title">Daftar User</h3>
+            <a href="/user/insert" class="btn btn-primary d-inline-flex float-end text-white"><i class="ti ti-plus me-1"></i>Tambah User</a>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -23,12 +23,12 @@
                     <tr class="align-middle">
                         <td>{{ $no++ }}</td>
                         <td>{{ $user->username }}</td>
-                        <td>{{ $user->profiles->tanggal_lahir }}</td>
-                        <td class="text-center"><span class="badge text-bg-danger">Administrator</span></td>
+                        <td>{{ $user->password }}</td>
+                        <td class="text-center"><span class="badge text-bg-{{ $user->role == 'Administrator' ? 'danger' : 'primary' }}">{{ $user->role }}</span></td>
                         <td class="text-center" style="width: 20%">
-                            <a class="btn btn-icon btn-primary"><i class="ti ti-eye"></i></a>
-                            <a class="btn btn-icon btn-warning"><i class="ti ti-pencil"></i></a>
-                            <a class="btn btn-icon btn-danger"><i class="ti ti-trash"></i></a>
+                            <a href="/user/view/{{ $user->id }}" class="btn btn-icon btn-primary text-white"><i class="ti ti-eye"></i></a>
+                            <a href="/user/update/{{ $user->id }}" class="btn btn-icon btn-warning text-white"><i class="ti ti-pencil"></i></a>
+                            <a href="/user/delete/{{ $user->id }}" class="btn btn-icon btn-danger text-white"><i class="ti ti-trash"></i></a>
                         </td>
                     </tr>
                     @endforeach

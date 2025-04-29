@@ -25,6 +25,6 @@ class User extends Model
     ];
 
     public function profiles() {
-        return $this->hasOne(Profile::class, 'id');
+        return $this->hasOne(Profile::class, 'id', 'id_profile');
     }
 }

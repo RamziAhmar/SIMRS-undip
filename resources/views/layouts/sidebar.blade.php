@@ -1,78 +1,68 @@
-<!--begin::Sidebar-->
-<aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
-    <!--begin::Sidebar Brand-->
-    <div class="sidebar-brand">
-        <!--begin::Brand Link-->
-        <a href="../index.html" class="brand-link">
-            <!--begin::Brand Image-->
-            <img src="/assets/dist/assets/img/AdminLTELogo.png" alt="AdminLTE Logo"
-                class="brand-image opacity-75 shadow" />
-            <!--end::Brand Image-->
-            <!--begin::Brand Text-->
-            <span class="brand-text fw-light">AdminLTE 4</span>
-            <!--end::Brand Text-->
-        </a>
-        <!--end::Brand Link-->
-    </div>
-    <!--end::Sidebar Brand-->
-    <!--begin::Sidebar Wrapper-->
-    <div class="sidebar-wrapper">
-        <nav class="mt-2">
-            <!--begin::Sidebar Menu-->
-            <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
-                <li class="nav-item">
-                    <a href="/" class="nav-link {{ $page == 'dashboard' ? 'active' : null }}">
-                        <i class="nav-icon bi bi-speedometer"></i>
-                        <p>Dashboard</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/" class="nav-link {{ $page == 'rekam-medis' ? 'active' : null }}">
-                        <i class="nav-icon bi bi-journal-text"></i>
-                        <p>Rekam Medis</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon bi bi-archive"></i>
-                        <p>
-                            Master Data
-                            <i class="nav-arrow bi bi-chevron-right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="/pasien" class="nav-link">
-                                <i class="nav-icon bi bi-person-heart"></i>
-                                <p>Pasien</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/pendaftaran" class="nav-link">
-                                <i class="nav-icon bi bi-card-checklist"></i>
-                                <p>
-                                    Pendaftaran
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="penanganan" class="nav-link">
-                                <i class="nav-icon bi bi-journal-check"></i>
-                                <p>Penanganan</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="/users" class="nav-link {{ $page == 'users' ? 'active' : null }}">
-                        <i class="nav-icon bi bi-person"></i>
-                        <p>Users</p>
-                    </a>
-                </li>
-            </ul>
-            <!--end::Sidebar Menu-->
-        </nav>
-    </div>
-    <!--end::Sidebar Wrapper-->
-</aside>
-<!--end::Sidebar-->
+    <!-- [ Sidebar Menu ] start -->
+    <nav class="pc-sidebar">
+        <div class="navbar-wrapper">
+            <div class="m-header">
+                <a href="/" class="b-brand text-primary">
+                    <!-- ========   Change your logo from here   ============ -->
+                    <img src="/assets/images/logo-dark.svg" class="img-fluid logo-lg" alt="logo">
+                </a>
+            </div>
+            <div class="navbar-content">
+                <ul class="pc-navbar">
+                    <li class="pc-item">
+                        <a href="/" class="pc-link">
+                            <span class="pc-micon"><i class="ti ti-dashboard"></i></span>
+                            <span class="pc-mtext">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="pc-item">
+                        <a href="/rekam_medis" class="pc-link">
+                            <span class="pc-micon"><i class="ti ti-chart-line"></i></span>
+                            <span class="pc-mtext">Rekam Medis</span>
+                        </a>
+                    </li>
+
+                    <li class="pc-item pc-caption">
+                        <label>Master Data</label>
+                        <i class="ti ti-dashboard"></i>
+                    </li>
+                    <li class="pc-item">
+                        <a href="/pasien" class="pc-link">
+                            <span class="pc-micon"><i class="ti ti-user-plus"></i></span>
+                            <span class="pc-mtext">Pasien</span>
+                        </a>
+                    </li>
+                    <li class="pc-item">
+                        <a href="/pendaftaran" class="pc-link">
+                            <span class="pc-micon"><i class="ti ti-notebook"></i></span>
+                            <span class="pc-mtext">Pendaftaran</span>
+                        </a>
+                    </li>
+                    <li class="pc-item">
+                        <a href="/penanganan" class="pc-link">
+                            <span class="pc-micon"><i class="ti ti-activity"></i></span>
+                            <span class="pc-mtext">Penanganan</span>
+                        </a>
+                    </li>
+                    <li class="pc-item">
+                        <a href="/profile" class="pc-link">
+                            <span class="pc-micon"><i class="ti ti-user-exclamation"></i></span>
+                            <span class="pc-mtext">Profile</span>
+                        </a>
+                    </li>
+
+                    <li class="pc-item pc-caption">
+                        <label>Access</label>
+                        <i class="ti ti-news"></i>
+                    </li>
+                    <li class="pc-item">
+                        <a href="/user" class="pc-link">
+                            <span class="pc-micon"><i class="ti ti-user"></i></span>
+                            <span class="pc-mtext">User</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- [ Sidebar Menu ] end -->

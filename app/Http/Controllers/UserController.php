@@ -3,13 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\Profile;
 
 class UserController extends Controller
 {
     public function index() {
-        return view('main', [
+        $users = User::latest()->get();
+
+        return view('main', compact('users'), [
             'title' => 'Users',
-            'page' => 'users',
+            'page' => 'user',
         ]);
     }
 }

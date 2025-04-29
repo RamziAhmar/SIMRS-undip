@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PasienController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,12 +19,24 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [DashboardController::class, 'index']);
 
+Route::get('/login', [AuthController::class, 'index']);
+
 Route::controller(UserController::class)->group(function () {
-    Route::get('/users', 'index');
-    Route::get('/users/view/{id}', 'view');
-    Route::get('/users/insert', 'add');
-    Route::post('/users/insert', 'insert');
-    Route::get('/users/update', 'edit');
-    Route::post('/users/update', 'update');
-    Route::get('/users/delete/{id}', 'delete');
+    Route::get('/user', 'index');
+    Route::get('/user/view/{id}', 'view');
+    Route::get('/user/insert', 'add');
+    Route::post('/user/insert', 'insert');
+    Route::get('/user/update', 'edit');
+    Route::post('/user/update', 'update');
+    Route::get('/user/delete/{id}', 'delete');
+});
+
+Route::controller(PasienController::class)->group(function () {
+    Route::get('/pasien', 'index');
+    Route::get('/pasien/view/{id}', 'view');
+    Route::get('/pasien/insert', 'add');
+    Route::post('/pasien/insert', 'insert');
+    Route::get('/pasien/update', 'edit');
+    Route::post('/pasien/update', 'update');
+    Route::get('/pasien/delete/{id}', 'delete');
 });

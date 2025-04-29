@@ -1,13 +1,16 @@
-<!--begin::Footer-->
-<footer class="app-footer">
-    <!--begin::To the end-->
-    <div class="float-end d-none d-sm-inline">Anything you want</div>
-    <!--end::To the end-->
-    <!--begin::Copyright-->
-    <strong>
-        Copyright &copy; 2025&nbsp;
-        <a href="https://adminlte.io" class="text-decoration-none">RS Gigi & Mulut UNDIP</a>.
-    </strong>
-    <!--end::Copyright-->
+<footer class="pc-footer">
+    <div class="footer-wrapper container-fluid">
+        <div class="row">
+            <div class="col-sm my-1">
+                <p class="m-0">Mantis &#9829; crafted by Team <a href="https://themeforest.net/user/codedthemes"
+                        target="_blank">Codedthemes</a>
+                    Distributed by <a href="https://themewagon.com/">ThemeWagon</a>.</p>
+            </div>
+            <div class="col-auto my-1">
+                <ul class="list-inline footer-link mb-0">
+                    <li class="list-inline-item"><a href="/">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </footer>
-<!--end::Footer-->
